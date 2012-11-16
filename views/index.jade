@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  div.navbar.navbar-inverse
+    div.navbar-inner
+      div.container
+        a.brand(href="/")ライブカメラちゃんねる
+  div.upper-main
+    div.container
+      #live
+        span.live-wrap
+          img(src=image,id="livecamera")
+
+  div.container
+    #form
+      form(action="/create",name="postfrom",method="POST",id="newpost")
+        textarea(id="comment",name="comment",placeholder="コメントが投稿できます。（最新版のGoogle Chrome、Safari、FireFoxでお試しください）")
+        input(id="token",type="hidden",name="token",value=token)
+        #action.form-inline(style="display:none;")
+          label名前
+          input(id="name",type="text",name="name",value="名無しさん",placeholder="名前")
+          div.action-comment
+            input.btn.btn-success(id="send",type="submit",value="投稿")
+            input.btn.cancel(id="cancel",type="button",value="キャンセル")
+    #items
+      for item,index in items
+        div.item(id=item._id,data-role-time=+item.date)
+          div.info
+            span.date(id="date" + item._id)
+              !{helper.format_date(item.date)}
+            span.name
+              投稿者：#{item.name}
+          pre #{item.comment}
+
+  #item-tmpl-wrap(style="display:none")
+    div.item(id="item-tmpl",style="display:none")
+      div.info
+        span.date
+        span.name
+      pre
+
+  script(type='text/javascript',src="/javascripts/index.js")
+  script(type='text/javascript',src="/javascripts/client.js")

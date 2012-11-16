@@ -1,0 +1,106 @@
+body {
+    background-image: url("../images/debut_light.png");
+}
+
+.navbar .container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container,
+.container {
+    width: 720px;
+}
+
+
+.navbar .brand {
+    color: white;
+}
+
+.navbar .brand:hover{
+    color: #999;
+}
+
+.upper-main {
+    padding: 10px 0 70px;
+    margin-bottom: 0;
+}
+
+#live {
+    width: 100%;
+    position: relative;
+}
+
+#live span.live-wrap {
+    display: block;
+    margin:0 auto;
+    width: 680px;
+    height: 370px;
+    overflow:hidden;
+    text-align: center;
+    border: 20px solid #000;
+    border-radius: 5px;
+}
+
+#live span.live-wrap:before{
+    content: " ";
+    position: absolute;
+    width:220px;
+    height:180px;
+    left: 250px;
+    bottom: -120px;
+    border-radius: 50%;
+    background-color: #000;
+    -webkit-transform: rotateX(75deg);
+       -moz-transform: rotateX(75deg);
+        -ms-transform: rotateX(75deg);
+         -o-transform: rotateX(75deg);
+            transform: rotateX(75deg);
+}
+
+#live span.live-wrap:after{
+    content: " ";
+    position: absolute;
+    width:60px;
+    height:50px;
+    left: 330px;
+    bottom: -30px;
+    background-color: #000;
+}
+
+#live img {
+    width: 700px;
+}
+
+#live img {
+
+}
+
+#form {
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset;
+}
+
+#comment {
+    width: 98%;
+    height: 20px;
+}
+
+.action-comment {
+    display: inline;
+    float: right;
+}
+
+.item {
+    padding: 10px 0 5px;
+    margin: 5px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,1);
+}
+
+.item .info .name {
+    width: 350px;
+    overflow:hidden;
+}
+.item .info .date{
+    margin-right: 10px;
+}
